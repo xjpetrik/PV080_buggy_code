@@ -1,4 +1,3 @@
-"""nejakej modul :)"""
 import sys
 import os
 import flask
@@ -9,8 +8,6 @@ app = flask.Flask(__name__)
 
 
 @app.route("/")
-def index():
-    """indexovani"""
     version = flask.request.args.get("urllib_version")
     url = flask.request.args.get("url")
     return fetch_website(version, url)
